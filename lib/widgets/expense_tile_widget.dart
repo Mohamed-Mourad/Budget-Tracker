@@ -38,7 +38,7 @@ class ExpenseTileWidget extends StatelessWidget {
       },
       child: ListTile(
         onTap: () => context.showAddExpenseSheet(expense: expense),
-        leading: getCategoryIcon(expense.category),
+        leading: getCategoryIcon(expense.category, context),
         title: Text(expense.title, style: textTheme.titleMedium),
         subtitle: Text(
           formattedDate,
@@ -51,23 +51,25 @@ class ExpenseTileWidget extends StatelessWidget {
     );
   }
 
-  Icon getCategoryIcon(Category category) {
+  Icon getCategoryIcon(Category category, BuildContext context) {
+    final color = Theme.of(context).colorScheme.primary;
+
     switch (category) {
       case Category.grocery:
-        return const Icon(Icons.shopping_cart);
+        return Icon(Icons.shopping_cart, color: color);
       case Category.food:
-        return const Icon(Icons.fastfood);
+        return Icon(Icons.fastfood, color: color);
       case Category.work:
-        return const Icon(Icons.work);
+        return Icon(Icons.work, color: color);
       case Category.entertainment:
-        return const Icon(Icons.movie);
+        return Icon(Icons.movie, color: color);
       case Category.traveling:
-        return const Icon(Icons.airplanemode_active);
+        return Icon(Icons.airplanemode_active, color: color);
       case Category.other:
-        return const Icon(Icons.category);
+        return Icon(Icons.category, color: color);
       case Category.all:
       default:
-        return const Icon(Icons.all_inclusive);
+        return Icon(Icons.all_inclusive, color: color);
     }
   }
 }
