@@ -1,3 +1,4 @@
+import 'package:budget_tracker/models/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:budget_tracker/blocs/expense_list/expense_list_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:intl/intl.dart';
 
 class ExpenseTileWidget extends StatelessWidget {
   const ExpenseTileWidget({super.key, required this.expense});
+
   final Expense expense;
 
   @override
@@ -36,7 +38,7 @@ class ExpenseTileWidget extends StatelessWidget {
       },
       child: ListTile(
         onTap: () => context.showAddExpenseSheet(expense: expense),
-        leading: Icon(Icons.car_repair, color: colorScheme.surfaceTint),
+        leading: getCategoryIcon(expense.category),
         title: Text(expense.title, style: textTheme.titleMedium),
         subtitle: Text(
           formattedDate,
@@ -47,5 +49,25 @@ class ExpenseTileWidget extends StatelessWidget {
         trailing: Text('-$price', style: textTheme.titleLarge),
       ),
     );
+  }
+
+  Icon getCategoryIcon(Category category) {
+    switch (category) {
+      case Category.grocery:
+        return const Icon(Icons.shopping_cart);
+      case Category.food:
+        return const Icon(Icons.fastfood);
+      case Category.work:
+        return const Icon(Icons.work);
+      case Category.entertainment:
+        return const Icon(Icons.movie);
+      case Category.traveling:
+        return const Icon(Icons.airplanemode_active);
+      case Category.other:
+        return const Icon(Icons.category);
+      case Category.all:
+      default:
+        return const Icon(Icons.all_inclusive);
+    }
   }
 }
