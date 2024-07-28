@@ -34,27 +34,26 @@ Ensure you have Flutter installed on your machine. You can download it from [flu
 1. Clone the repository:
    ```sh
    git clone https://github.com/Mohamed-Mourad/Budget-Tracker.git
-   
+
 2. Navigate to the project directory:
    ```sh
    cd {path where you cloned the project}
 3. Install the dependencies:
    ```sh
    flutter pub get
-   
+
 4. Run the app:
    ```sh
    flutter run
-   
+
 ## Project Structure
 
-Here's a brief overview of the project structure:
-lib/
-├── blocs/               # Contains BLoC files
-├── data/                # Contains data layer of the app
-├── models/              # Contains data models
-├── repositories/        # Contains repository files
-├── screens/             # Contains UI screens
-├── widgets/             # Contains reusable widgets
+Here iss a brief overview of the project structure:  
+lib/  
+├── blocs/               # Contains BLoC files  
+├── data/                # Contains data layer of the app  
+├── models/              # Contains data models  
+├── repositories/        # Contains repository files  
+├── screens/             # Contains UI screens  
+├── widgets/             # Contains reusable widgets  
 ├── main.dart            # Entry point of the app
-
