@@ -36,6 +36,8 @@ Ensure you have Flutter installed on your machine. You can download it from [flu
    git clone https://github.com/Mohamed-Mourad/Budget-Tracker.git
    
 2. Navigate to the project directory:
+   ```sh
+   cd {path where you cloned the project}
 3. Install the dependencies:
    ```sh
    flutter pub get
