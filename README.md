@@ -37,9 +37,12 @@ Ensure you have Flutter installed on your machine. You can download it from [flu
    
 2. Navigate to the project directory:
 3. Install the dependencies:
-   ```flutter pub get```
+   ```sh
+   flutter pub get
+   
 4. Run the app:
-   ```flutter run```
+   ```sh
+   flutter run
    
 ## Project Structure
 
