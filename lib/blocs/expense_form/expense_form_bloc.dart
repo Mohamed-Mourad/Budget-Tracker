@@ -80,7 +80,7 @@ class ExpenseFormBloc extends Bloc<ExpenseFormEvent, ExpenseFormState> {
     emit(state.copyWith(status: ExpenseFormStatus.loading));
 
     try {
-      await _repository.createExpense(expense);
+      await _repository.saveExpense(expense);
       emit(state.copyWith(status: ExpenseFormStatus.success));
       emit(ExpenseFormState(date: DateTime.now()));
     } catch (e) {

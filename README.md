@@ -6,7 +6,8 @@ Welcome to the Simple Budgeting/Expense Tracking App! This Flutter project helps
 
 - **Expense Tracking**: Easily add, view, and delete expenses.
 - **Budget Management**: Set budgets and track your spending against them.
-- **Persistent Storage**: Save your data using SharedPreferences.
+- **Persistent Storage**: Save your data using SQFLite.
+- **App Theme**: Change from light or dark modes using shared preferences
 - **Localization**: Supports multiple languages with the intl package.
 - **Smooth UI**: Enhanced UI components using the figma_squircle package.
 
@@ -22,6 +23,7 @@ The following packages are used in this project:
 - **shared_preferences**: ^2.2.3
 - **intl**: ^0.19.0
 - **figma_squircle**: ^0.5.3
+- **sqflite**: ^2.3.3+1
 
 ## Getting Started
 

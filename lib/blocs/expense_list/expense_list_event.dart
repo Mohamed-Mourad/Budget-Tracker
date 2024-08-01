@@ -11,6 +11,15 @@ final class ExpenseListSubscriptionRequested extends ExpenseListEvent {
   const ExpenseListSubscriptionRequested();
 }
 
+final class ExpenseListExpenseAdded extends ExpenseListEvent {
+  const ExpenseListExpenseAdded({required this.expense});
+
+  final Expense expense;
+
+  @override
+  List<Object> get props => [expense];
+}
+
 final class ExpenseListExpenseDeleted extends ExpenseListEvent {
   const ExpenseListExpenseDeleted({required this.expense});
 

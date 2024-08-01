@@ -1,3 +1,4 @@
+import 'package:budget_tracker/data/shared_preferences.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,8 +12,7 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
       if (event == ThemeEvent.toggleTheme) {
         final isDark = state == ThemeState.light;
         emit(isDark ? ThemeState.dark : ThemeState.light);
-        final prefs = await SharedPreferences.getInstance();
-        prefs.setBool(_themeKey, !isDark);
+        CacheHelper.sharedPreferences.setBool(_themeKey, !isDark);
       }
     });
   }
@@ -20,8 +20,7 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
   final String _themeKey = 'theme';
 
   Future<void> _loadTheme() async {
-    final prefs = await SharedPreferences.getInstance();
-    final isDark = prefs.getBool(_themeKey) ?? false;
+    final isDark = CacheHelper.sharedPreferences.getBool(_themeKey) ?? false;
     emit(isDark ? ThemeState.dark : ThemeState.light);
   }
 }

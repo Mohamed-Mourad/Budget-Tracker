@@ -13,6 +13,7 @@ class ExpenseListBloc extends Bloc<ExpenseListEvent, ExpenseListState> {
   })  : _repository = repository,
         super(const ExpenseListState()) {
     on<ExpenseListSubscriptionRequested>(_onSubscriptionRequested);
+    on<ExpenseListExpenseAdded>(_onExpenseAdded); // Add this line
     on<ExpenseListExpenseDeleted>(_onExpenseDeleted);
     on<ExpenseListCategoryFilterChanged>(_onExpenseCategoryFilterChanged);
   }
@@ -25,7 +26,7 @@ class ExpenseListBloc extends Bloc<ExpenseListEvent, ExpenseListState> {
       ) async {
     emit(state.copyWith(status: () => ExpenseListStatus.loading));
 
-    final stream = _repository.getAllExpenses();
+    final stream = _repository.getExpenses();
 
     await emit.forEach<List<Expense?>>(
       stream,
@@ -34,7 +35,7 @@ class ExpenseListBloc extends Bloc<ExpenseListEvent, ExpenseListState> {
         expenses: () => expenses,
         totalExpenses: () => expenses
             .map((currentExpense) => currentExpense?.amount)
-            .fold(0.0, (a, b) => a + b!),
+            .fold(0.0, (a, b) => a! + b!),
       ),
       onError: (_, __) => state.copyWith(
         status: () => ExpenseListStatus.failure,
@@ -42,11 +43,20 @@ class ExpenseListBloc extends Bloc<ExpenseListEvent, ExpenseListState> {
     );
   }
 
+  Future<void> _onExpenseAdded(
+      ExpenseListExpenseAdded event,
+      Emitter<ExpenseListState> emit,
+      ) async {
+    await _repository.saveExpense(event.expense);
+    add(const ExpenseListSubscriptionRequested());
+  }
+
   Future<void> _onExpenseDeleted(
       ExpenseListExpenseDeleted event,
       Emitter<ExpenseListState> emit,
       ) async {
     await _repository.deleteExpense(event.expense.id);
+    add(const ExpenseListSubscriptionRequested());
   }
 
   Future<void> _onExpenseCategoryFilterChanged(
