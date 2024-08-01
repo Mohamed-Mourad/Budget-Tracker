@@ -62,10 +62,10 @@ lib/
 
 ## ScreenShots
 
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipPhPtNvvFFRFwKw29y7SFW9_3-qsGYroQyamKzV?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipONElmDNu17JARNHhRrJi3cOZjsztbzSeF_gqOh?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipOzhB9z6W8I6F_NzjTc6i-mzkDwyuQVbXHBiODu?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipPzNhcHdptFF4ctKQnyt3M31R4eU8bkIqD73DfN?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipMOATTyKlMkJA5wiit3wLUshWyEOze8DzlYQiRQ?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipMPXMzzcsWJL-ggATw30VFJ_5o--I5GOSJjzf6C?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
-![App Screenshot](https://photos.google.com/share/AF1QipPfNseHmos2UnydicuBkhgHbTarpkRrOPXu5ASDJlPa7I0jwnseQHqjW4MFBahFEQ/photo/AF1QipNJ7nBJQu5XQFKeXeoUvQcVJxR-8L8JPnd0RP1g?key=LTZ6SmdqVUVWUU9ZZzRVWU9tWHU1RnM5OUllNEdR)
+![App Screenshot](assets/screenshots/1.jpg)
+![App Screenshot](assets/screenshots/2.jpg)
+![App Screenshot](assets/screenshots/3.jpg)
+![App Screenshot](assets/screenshots/4.jpg)
+![App Screenshot](assets/screenshots/5.jpg)
+![App Screenshot](assets/screenshots/6.jpg)
+![App Screenshot](assets/screenshots/7.jpg)
