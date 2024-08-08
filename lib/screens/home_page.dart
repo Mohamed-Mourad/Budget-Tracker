@@ -11,6 +11,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Hello, ${getGreeting()}'),
@@ -40,6 +43,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: context.showAddExpenseSheet,
         child: const Icon(Icons.add),
+        backgroundColor: colorScheme.inversePrimary,
       ),
     );
   }

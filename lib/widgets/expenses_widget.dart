@@ -26,7 +26,7 @@ class ExpensesWidget extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           primary: false,
-          separatorBuilder: (context, index) => const SizedBox(height: 10),
+          separatorBuilder: (context, index) => const SizedBox(height: 4),
           itemCount: expenses.length,
           itemBuilder: (context, index) => ExpenseTileWidget(
             expense: expenses[index]!,

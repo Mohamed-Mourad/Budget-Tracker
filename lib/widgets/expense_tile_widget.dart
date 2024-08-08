@@ -22,31 +22,41 @@ class ExpenseTileWidget extends StatelessWidget {
     final currency = NumberFormat.currency(symbol: '\$', decimalDigits: 0);
     final price = currency.format(expense.amount);
 
-    return Dismissible(
-      key: ValueKey(expense.id),
-      direction: DismissDirection.endToStart,
-      background: Container(
-        alignment: Alignment.centerRight,
-        padding: const EdgeInsets.all(16),
-        color: colorScheme.error,
-        child: Icon(Icons.delete, color: colorScheme.onError),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
       ),
-      onDismissed: (direction) {
-        context
-            .read<ExpenseListBloc>()
-            .add(ExpenseListExpenseDeleted(expense: expense));
-      },
-      child: ListTile(
-        onTap: () => context.showAddExpenseSheet(expense: expense),
-        leading: getCategoryIcon(expense.category, context),
-        title: Text(expense.title, style: textTheme.titleMedium),
-        subtitle: Text(
-          formattedDate,
-          style: textTheme.bodySmall?.copyWith(
-            color: colorScheme.onSurface.withOpacity(0.5),
+      child: Card(
+        clipBehavior:Clip.antiAliasWithSaveLayer,
+        child: Dismissible(
+          key: ValueKey(expense.id),
+          direction: DismissDirection.endToStart,
+          background: Container(
+            alignment: Alignment.centerRight,
+            padding: const EdgeInsets.all(16),
+            color: colorScheme.error,
+            child: Icon(Icons.delete, color: colorScheme.onError),
+          ),
+          onDismissed: (direction) {
+            context
+                .read<ExpenseListBloc>()
+                .add(ExpenseListExpenseDeleted(expense: expense));
+          },
+          child: ListTile(
+            onTap: () => context.showAddExpenseSheet(expense: expense),
+            leading: getCategoryIcon(expense.category, context),
+            title: Text(expense.title, style: textTheme.titleMedium),
+            subtitle: Text(
+              formattedDate,
+              style: textTheme.bodySmall?.copyWith(
+                color: colorScheme.onSurface.withOpacity(0.5),
+              ),
+            ),
+            trailing: Text('-$price', style: textTheme.titleLarge),
+            tileColor: colorScheme.onSurface.withOpacity(0.10),
           ),
         ),
-        trailing: Text('-$price', style: textTheme.titleLarge),
       ),
     );
   }

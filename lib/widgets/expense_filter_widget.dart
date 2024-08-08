@@ -8,6 +8,9 @@ class ExpenseFilterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
     const categories = Category.values;
 
     final activeFiler = context.select(
@@ -26,6 +29,7 @@ class ExpenseFilterWidget extends StatelessWidget {
           return ChoiceChip(
             label: Text(category.toName),
             selected: activeFiler == category,
+            selectedColor: colorScheme.inversePrimary,
             onSelected: (_) => context
                 .read<ExpenseListBloc>()
                 .add(ExpenseListCategoryFilterChanged(category)),
