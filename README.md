@@ -69,3 +69,4 @@ lib/
 ![App Screenshot](assets/screenshots/5.jpg)
 ![App Screenshot](assets/screenshots/6.jpg)
 ![App Screenshot](assets/screenshots/7.jpg)
+![App Screenshot](assets/screenshots/8.jpg)
