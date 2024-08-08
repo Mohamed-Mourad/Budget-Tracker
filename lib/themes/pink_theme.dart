@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LightTheme {
+class PinkTheme {
   static const colorScheme = ColorScheme(
     brightness: Brightness.light,
     primary: Color(0xffffb7ce),

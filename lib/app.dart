@@ -4,6 +4,7 @@ import 'package:budget_tracker/repositories/expense_repository.dart';
 import 'package:budget_tracker/screens/home_page.dart';
 import 'package:budget_tracker/themes/dark_theme.dart';
 import 'package:budget_tracker/themes/light_theme.dart';
+import 'package:budget_tracker/themes/pink_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,12 +32,23 @@ class App extends StatelessWidget {
           builder: (context, themeState) {
             return MaterialApp(
               home: const HomePage(),
-              theme: themeState == ThemeState.light ? LightTheme.theme : DarkTheme.theme,
+              theme: _getThemeData(themeState),
               debugShowCheckedModeBanner: false,
             );
           },
         ),
       ),
     );
+  }
+
+  ThemeData _getThemeData(ThemeState themeState) {
+    switch (themeState) {
+      case ThemeState.light:
+        return LightTheme.theme;
+      case ThemeState.dark:
+        return DarkTheme.theme;
+      case ThemeState.pink:
+        return PinkTheme.theme; // Apply the pink theme
+    }
   }
 }

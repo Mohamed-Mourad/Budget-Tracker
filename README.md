@@ -66,6 +66,7 @@ lib/
 ![App Screenshot](assets/screenshots/2.jpg)
 ![App Screenshot](assets/screenshots/3.jpg)
 ![App Screenshot](assets/screenshots/4.jpg)
+![App Screenshot](assets/screenshots/pink-1.jpg)
 ![App Screenshot](assets/screenshots/5.jpg)
 ![App Screenshot](assets/screenshots/6.jpg)
 ![App Screenshot](assets/screenshots/7.jpg)

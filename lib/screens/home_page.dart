@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 context.read<ThemeBloc>().add(ThemeEvent.toggleTheme);
               },
-              icon: themeState == ThemeState.light ? const Icon(Icons.nightlight_round) : const Icon(Icons.wb_sunny),
+              icon: getThemeIcon(themeState),
             );
           }),
         ],
@@ -42,8 +42,8 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: context.showAddExpenseSheet,
-        child: const Icon(Icons.add),
         backgroundColor: colorScheme.inversePrimary,
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -57,6 +57,17 @@ class HomePage extends StatelessWidget {
       return 'Good Afternoon';
     } else {
       return 'Good Evening';
+    }
+  }
+
+  Icon getThemeIcon(ThemeState themeState) {
+    switch (themeState) {
+      case ThemeState.light:
+        return const Icon(Icons.nightlight_round);
+      case ThemeState.dark:
+        return const Icon(Icons.wb_sunny);
+      case ThemeState.pink:
+        return const Icon(Icons.favorite, color: Color(0xffffb7ce)); // Example icon for pink theme
     }
   }
 }
