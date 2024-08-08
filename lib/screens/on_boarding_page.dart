@@ -58,6 +58,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             child: const Text(
               "SKIP",
             ),
+            
           ),
         ],
       ),
@@ -115,6 +116,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     }
                   },
                   child: const Icon(Icons.arrow_forward_outlined),
+                  backgroundColor: colorScheme.inversePrimary,
                 )
               ],
             ),
