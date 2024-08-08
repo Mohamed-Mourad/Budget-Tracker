@@ -29,8 +29,4 @@ class LocalDataStorage {
     final expenses = await DatabaseHelper().getExpenses(await db);
     _controller.add(expenses);
   }
-
-  Future<void> initialize() async {
-    await _initialize();
-  }
 }

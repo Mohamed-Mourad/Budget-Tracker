@@ -8,7 +8,6 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   final storage = LocalDataStorage();
-  await storage.initialize();
 
   await CacheHelper.init();
 

@@ -30,9 +30,6 @@ class DatabaseHelper {
           print('Error in creating table: ${error.toString()}');
         });
       },
-      onOpen: (database) {
-        getExpenses(database);
-      },
     );
   }
 
