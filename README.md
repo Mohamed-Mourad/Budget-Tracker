@@ -60,7 +60,7 @@ lib/
 ├── repositories/        # Contains repository files  
 ├── screens/             # Contains UI screens  
 ├── widgets/             # Contains reusable widgets  
-├── methods/             # Contains reusable methods
+├── methods/             # Contains reusable methods  
 ├── main.dart            # Entry point of the app
 
 ## ScreenShots
