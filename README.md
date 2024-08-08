@@ -24,6 +24,8 @@ The following packages are used in this project:
 - **intl**: ^0.19.0
 - **figma_squircle**: ^0.5.3
 - **sqflite**: ^2.3.3+1
+- **path**: ^1.9.0
+- **smooth_page_indicator**: ^1.2.0+3
 
 ## Getting Started
 
@@ -62,6 +64,8 @@ lib/
 
 ## ScreenShots
 
+![App Screenshot](assets/screenshots/ob-1.jpg)
+![App Screenshot](assets/screenshots/ob-2.jpg)
 ![App Screenshot](assets/screenshots/1.jpg)
 ![App Screenshot](assets/screenshots/2.jpg)
 ![App Screenshot](assets/screenshots/3.jpg)

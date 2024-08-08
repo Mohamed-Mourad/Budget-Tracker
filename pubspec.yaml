@@ -23,6 +23,7 @@ dependencies:
   figma_squircle: ^0.5.3
   sqflite: ^2.3.3+1
   path: ^1.9.0
+  smooth_page_indicator: ^1.2.0+3
 
 
 dev_dependencies:
@@ -41,3 +42,6 @@ flutter_icons:
 # The following section is specific to Flutter packages.
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/

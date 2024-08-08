@@ -1,7 +1,9 @@
 import 'package:budget_tracker/blocs/expense_list/expense_list_bloc.dart';
 import 'package:budget_tracker/blocs/theme_bloc/theme_bloc.dart';
+import 'package:budget_tracker/data/shared_preferences.dart';
 import 'package:budget_tracker/repositories/expense_repository.dart';
 import 'package:budget_tracker/screens/home_page.dart';
+import 'package:budget_tracker/screens/on_boarding_page.dart';
 import 'package:budget_tracker/themes/dark_theme.dart';
 import 'package:budget_tracker/themes/light_theme.dart';
 import 'package:budget_tracker/themes/pink_theme.dart';
@@ -31,7 +33,7 @@ class App extends StatelessWidget {
         child: BlocBuilder<ThemeBloc, ThemeState>(
           builder: (context, themeState) {
             return MaterialApp(
-              home: const HomePage(),
+              home: _getHome(),
               theme: _getThemeData(themeState),
               debugShowCheckedModeBanner: false,
             );
@@ -49,6 +51,16 @@ class App extends StatelessWidget {
         return DarkTheme.theme;
       case ThemeState.pink:
         return PinkTheme.theme; // Apply the pink theme
+    }
+  }
+
+  Widget _getHome() {
+    bool? onBoarding = CacheHelper.getData(key: 'onBoarding');
+
+    if (onBoarding != null) {
+      return const HomePage();
+    } else {
+      return const OnBoardingScreen();
     }
   }
 }
