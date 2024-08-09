@@ -48,9 +48,17 @@ class EmptyListWidget extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       alignment: Alignment.center,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.search),
-          const SizedBox(height: 10),
+          const SizedBox(height: 64,),
+          SizedBox(
+            width: 220.0,
+            child: Image.asset(
+              "assets/images/search-failed.png",
+              fit: BoxFit.cover,
+            ),
+          ),
+          const SizedBox(height: 24,),
           Text(
             'Nothing to see here',
             textAlign: TextAlign.center,

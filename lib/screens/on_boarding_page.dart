@@ -58,7 +58,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             child: const Text(
               "SKIP",
             ),
-            
+
           ),
         ],
       ),
@@ -115,8 +115,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           curve: Curves.fastLinearToSlowEaseIn);
                     }
                   },
-                  child: const Icon(Icons.arrow_forward_outlined),
                   backgroundColor: colorScheme.inversePrimary,
+                  child: const Icon(Icons.arrow_forward_outlined),
                 )
               ],
             ),
@@ -145,13 +145,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         ),
       ),
       const SizedBox(
-        height: 15.0,
+        height: 6.0,
       ),
       Text(
         model.body,
         style: const TextStyle(
-          fontSize: 14.0,
-          fontWeight: FontWeight.bold,
+          fontSize: 18.0,
+          fontWeight: FontWeight.w300,
         ),
       ),
       const SizedBox(
